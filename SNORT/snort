@@ -1,1 +1,51 @@
 #This snort notes 
+
+Snort : open source network intrusion detection (IDS) and prevention system (IPS) based on rules means signature based IDS and IPS
+
+What is IDS -->  IDS id passive monitor for detection bad traffic and give alert ofr admin  
+types:
+     NIDS --> installed on network (network IDS)
+     HIDS --> on computers or hots (Host IDS)
+  
+What is IPS -->  IPS is protecting solution to protect the network agnist attacks 
+types: 
+     NIPS -->  installed on network (signature based )
+     NBA  -->  installed on network (behavior based) use machine learning  or baselining to learn normal traffic 
+     WIPS -->  for wireless networks 
+     HIPS -->  for computers or any client
+
+Detection/Prevention Techniques:
+         1- Signature based -->  based on rules 
+         2- behavior or anomaly based  --> using machine learnign or AI
+         2- Policy based --> based on system security policy 
+ 
+ 
+ Start with snort 
+ 
+ $ snort -V  --> snort version  
+ $ sudo snort -c /etc/snort/snort.conf -T -->  -c spicify condif file -T testing the config file 
+ $ snort -q --> dont show banner 
+ 
+ snort sniffing mode :
+ -v  -->  -verbose show all tcp/ip output 
+ -d  -->  print packet data
+ -e  --> print headers details 
+ -x  --> print data of packet  in hex      
+ -i  --> interface use it for sniff 
+ 
+ snort packet loging mode:
+ -l --> lgging mode save output to dir  
+ -K --> log in ASCII also creatres dir for human format 
+ -r --> read snort log file  
+ -n --> number of packet to process after n will stop 
+ Examples :
+ $ sudo snort -dev  -l .
+ $ snort -dev -K ASCII -l .
+ $ snort -r <snort logfile to read > --> also you can read the file in tcpdump and wireshark 
+ $ snort -der <logfile> -n 10  --> process only 10 packets 
+ filtering in snort 
+ 
+ $ snort -r <logfile> -X
+ $ snort -r <logfile>  icmp
+ $ snort -r <lofile>  tcp
+ $ snort -r <logfile> 'udp and port 53'
