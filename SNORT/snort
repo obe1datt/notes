@@ -49,3 +49,27 @@ Detection/Prevention Techniques:
  $ snort -r <logfile>  icmp
  $ snort -r <lofile>  tcp
  $ snort -r <logfile> 'udp and port 53'
+ 
+Snort IDS/IPS mode 
+
+-N --> Disbale logging 
+-D --> run in background
+-A --> alert mode 
+       full --> full alert mode all possible info about the alert (the defult when but -A)
+       fast --> fast info about alert like alert msg timestamp source ip  and port number 
+       console --> fast style alert on screen 
+       cmg --> basic header details and payload hex and text format 
+       none --> no alert display 
+       
+rule in snort --> alert icmp any any <> any any(msg:"icmp packet found"; sid: 100001; rev:1;)
+
+this path were you can add your rule --> "/etc/snort/rules/local.rules"
+
+$ sudo snort -c /etc/snort/snort.conf -N --> disbale logging
+$ sudo snort -c /etc/snort/snort.conf -D --> in background
+
+$ ps -ef | grep snort 
+$ sudo kill -9 <process id>
+
+       
+
