@@ -71,5 +71,12 @@ $ sudo snort -c /etc/snort/snort.conf -D --> in background
 $ ps -ef | grep snort 
 $ sudo kill -9 <process id>
 
-       
+Example:       
+$ sudo snort -c /etc/snort/snort.conf -A console
+$ sudo snort -c /etc/snort/snort.conf -A cmg 
 
+$ sudo snort -c /etc/snort/rules/local.rules -A full
+
+IPS mode and dropingg packets
+-Q --daq afpacke --> snort ips mode --daq (Activate the Data Acquisition)
+$ sudo snort -c /etc/snort/snort.conf -Q --dag afpacke -i eth0:eth1 -A console
