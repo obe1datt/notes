@@ -80,3 +80,32 @@ $ sudo snort -c /etc/snort/rules/local.rules -A full
 IPS mode and dropingg packets
 -Q --daq afpacke --> snort ips mode --daq (Activate the Data Acquisition)
 $ sudo snort -c /etc/snort/snort.conf -Q --dag afpacke -i eth0:eth1 -A console
+
+Snort PECAP investigation :
+print alert and network traffic absed on ruleset you but 
+ -r  or --pcap--single= --> read single pecap file  
+ --pcap-list="" --> read mulrtple pecaps 
+ --pcap-show --> show pcap name 
+ 
+ $ sudo snort -r <pcap file >
+ $ sudo snort  -c /etc/snort/snort.conf -r <pcap file> -A console  -n 10 
+ $ sudo snort -c /etc/snort/snort.conf --pcap-lsit="<firstpcapfile> <seconed pcapfile>" -A console  --pcap-show
+ 
+ Writing snort custem rules :
+ 
+ alert {protcol type} {source ip} {sourec port} <> {destination ip} {detination port}(msg:"rules achived";referance:'CVE-XXXx';sid:10000000;rev:1;)
+ 
+ EXamples :
+ $alert icmp 192.168.1.56 any <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert icmp 192.168.1.0/24 any <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert icmp [192.168.1.0/24, 10.1.1.0/24] any <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert icmp !192.168.1.0/24 any <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert tcp !192.168.1.0/24 21 <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert tcp !192.168.1.0/24 !21 <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert tcp !192.168.1.0/24 1:1024 <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ $alert icmp any :1024 <> any any  (msg: "ICMP Packet Found"; sid: 100001; rev:1;) --> < port 1024
+ $alert icmp any 1024: <> any any (msg: "ICMP Packet Found"; sid: 100001; rev:1;)  --> > port number 1024
+ $alert icmp any 80,1024: <> any any (msg: "ICMP Packet Found"; sid: 100001; rev:1;)
+ 
+ -> source to destination 
+ <>  both source and destiniation 
