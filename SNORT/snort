@@ -109,3 +109,22 @@ print alert and network traffic absed on ruleset you but
  
  -> source to destination 
  <>  both source and destiniation 
+Payload data
+   content : 
+   $alert tcp any any <> any 80  (msg: "GET Request Found"; content:"GET"; sid: 100001; rev:1;)
+   Nocase: disbale case sensitve 
+   $alert tcp any any <> any 80  (msg: "GET Request Found"; content:"GET"; nocase; sid: 100001; rev:1;)
+   fast_pattren:
+   $alert tcp any any <> any 80  (msg: "GET Request Found"; content:"GET"; fast_pattern; content:"www";  sid:100001; rev:1;)
+
+Non-Payload Detection Rule Options 
+   ID : Filtering the IP id field.
+   $alert tcp any any <> any any (msg: "ID TEST"; id:123456; sid: 100001; rev:1;)
+   Flags:Filtering the TCP flags.
+   $alert tcp any any <> any any (msg: "FLAG TEST"; flags:S;  sid: 100001; rev:1;)
+   Dsize:Filtering the packet payload size.
+   $alert ip any any <> any any (msg: "SEQ TEST"; dsize:100<>300;  sid: 100001; rev:1;)
+   Sameip : Filtering the source and destination IP addresses for duplication.
+   $alert ip any any <> any any (msg: "SAME-IP TEST";  sameip; sid: 100001; rev:1;)
+   
+Usfull link --> http://manual-snort-org.s3-website-us-east-1.amazonaws.com/
