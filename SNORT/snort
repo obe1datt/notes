@@ -128,3 +128,6 @@ Non-Payload Detection Rule Options
    $alert ip any any <> any any (msg: "SAME-IP TEST";  sameip; sid: 100001; rev:1;)
    
 Usfull link --> http://manual-snort-org.s3-website-us-east-1.amazonaws.com/
+
+ftp faild lgin rule  --> alert tcp any any <> any 21 (msg:'foubd';content:"530 User";nocase;sid:100002;rev:2;)
+ftp succesfull login --> alert tcp any any <> any 21 (msg:'foubd';content:"230 User";nocase;sid:100002;rev:2;)
