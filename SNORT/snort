@@ -131,3 +131,7 @@ Usfull link --> http://manual-snort-org.s3-website-us-east-1.amazonaws.com/
 
 ftp faild lgin rule  --> alert tcp any any <> any 21 (msg:'foubd';content:"530 User";nocase;sid:100002;rev:2;)
 ftp succesfull login --> alert tcp any any <> any 21 (msg:'foubd';content:"230 User";nocase;sid:100002;rev:2;)
+ftp valid usernmae but bad password --> alert tcp any any <> any 21 (msg:'foubd';content:"331 password";nocase;sid:100002;rev:2;)
+ftp admin accound with bad password --> alert tcp any any <> any 21 (msg:'foubd';content:"Administrator";content:"331 password";nocase;sid:100002;rev:2;)
+
+
