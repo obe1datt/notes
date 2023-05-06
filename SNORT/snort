@@ -137,3 +137,6 @@ ftp admin accound with bad password --> alert tcp any any <> any 21 (msg:'foubd'
 rules to Detect GIF 
 alert cp any any <> (msg:"GIF1";content:"|47 49 46 38 37 61|";sid:100001;rev:1;)
 alert cp any any <> (msg:"GIF2";content:"|47 49 46 38 39 61|";sid:100002;rev:2;)
+
+rule for detect torrent
+ alert tcp any any <>  any any (msg:"torrent"; content:".torrent"; nocase ; sid:100004 ;rev:1 ;)
