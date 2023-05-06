@@ -79,7 +79,7 @@ $ sudo snort -c /etc/snort/rules/local.rules -A full
 
 IPS mode and dropingg packets
 -Q --daq afpacke --> snort ips mode --daq (Activate the Data Acquisition)
-$ sudo snort -c /etc/snort/snort.conf -Q --dag afpacke -i eth0:eth1 -A console
+$ sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth1 -A console
 
 Snort PECAP investigation :
 print alert and network traffic absed on ruleset you but 
