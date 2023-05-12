@@ -38,4 +38,6 @@ $ zeek -v  --> zeek version
 start zeek service  by zeek control module  this control module help to start stop check status  etc 
  $ zeekctl 
  
+ zeek-cut -->  for more undertandable output 
  
+ $cat conn.log  | zeek-cut host_name
