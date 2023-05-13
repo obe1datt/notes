@@ -55,13 +55,41 @@ Process Explorer enables you to inspect the details of a running process, such a
     
     
 3- osquery     
+   it is open-source tool creted by facebook 
+   with this tool IR teams can query endpoint or multiple endpoints using SQL syntax
+   can installed on mutiple endpoints 
+   to interact with osquery type osqueryi in CMD or PS 
+   
+   osquery>  seelect pid,name,path from  processes where name='lsass.exe';
+   Kolide Fleet UI
+   you can query mutiple ednpoints at asme time  
+
+4- Wazuh 
+   it is opensource EDR endpoint detection and response  tool 
+   help to mintor the device for any milcios activity 
+   this tool has nutiple features :  
+      Auditing a device for common vulnerabilities
+      Proactively monitoring a device for suspicious activity such as unauthorized logins, brute-force attacks, or privilege escalations.
+      Visualizing complex data and events into neat and trendy graphs
+      Recording a device's normal operating behaviour to help with detecting anomalies
     
     
-    
-    
-    
-    
-    
+# Evnet log analysis     
+1- Event corrletation 
+   identifes significant relationships from mutiple log sources like network application endpoints  
+   exmaple netwroks logs have mutiples  logsources like sysmon , firewall logs , routers switches logs  
+   With this information, we can connect the dots of each artefact from the two data sources:
+      Source and Destination IP
+      Source and Destination Port
+      Action Taken
+      Protocol
+      Process name
+      User Account
+      Machine Name
+   
+2- Baselining     
+   the process kowing that what is expected to be normal 
+   with that can help us quickly determine the outliers that could threaten the organization
     
     
     
