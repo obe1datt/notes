@@ -1,1 +1,29 @@
+# Task manager 
 
+Task manager has five tabes 
+ 1- process 
+ 2- prefomance 
+ 3- users 
+ 4- Details 
+ 5- services 
+ 
+ 1- process
+    categorized in the 
+    1- Apps 
+    2- Background process 
+    3- windwos process 
+    
+    the process has minimal columns 
+       * Name, Status, CPU, and Memory
+       * right clcik to add more coulmns  
+    
+    Each columns has puspose 
+      1- Type -->  which is the type of process (APP,background process. windwos process)
+      2- Publisher --> the auter of program 
+      3- PID  --> process id 
+      4- process name --> file name of the process 
+      5- command line --> full cmd that lunch the process
+      6- CPU --> The amount of CPU (processing power) the process uses.
+      7- memort--> The amount of physical working memory utilized by the process. 
+ 2- Details  tab     
+      
