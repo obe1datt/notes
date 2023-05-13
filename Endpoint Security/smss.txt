@@ -16,8 +16,15 @@ Session 1 (csrss.exe & winlogon.exe)
 in process hacker go to token tab and you can find the session
 
 any subsyem are listed in HKLM\System\CurrentControlSet\Control\Session Manager\Subsystems
+smss.exe also cerates enviroment virables and virtual memory paging  and start winlogon.exe 
 
 
+the normal of smss.exe 
+Image Path -->   %SystemRoot%\System32\smss.exe
+parent process --> System 
+numer of instances --> one master instances and child instances per session  the child instances exist after the sessionexist 
+User account :Local system 
+start time -->  after system process within seconed 
 
 
 
