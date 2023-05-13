@@ -25,5 +25,33 @@ Task manager has five tabes
       5- command line --> full cmd that lunch the process
       6- CPU --> The amount of CPU (processing power) the process uses.
       7- memort--> The amount of physical working memory utilized by the process. 
- 2- Details  tab     
+ 2- Details  tab  
+ also privides some core processs such pid,status,user name 
+ also some additoinal Image path name and command line
+ this tow columns help the anlysit to detect any anolmies 
+ svhost.exe  and the image path C:\...\notrsknl.exe  ?? that is anomaly
+ 
+ 
+ Task manger help alot to detect anomalies but lack 
+ some infomation such PPID 
+ the services.exe start before the scvhost.exe
+ 
+ 
+ Process hacker and process exeplorer help us to overcome task manager problems 
+ another command linentools such tasklist, Get-Process or ps (PowerShell), and wmic.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
       
