@@ -1,1 +1,74 @@
+Core Windows process  
+Task-Manager will help  to understand the process in windows  
+so  what is task manager : it GUI built tools aim to allowing user to see running process and also show resources usage 
+https://tryhackme.com/room/btwindowsinternals
+The folwing shows some process that it is normal
+  > means prrent process 
+  System (Parent) > smss.exe (Child)
+    System
+    System > smss.exe
+    csrss.exe
+    wininit.exe
+    wininit.exe > services.exe
+    wininit.exe > services.exe > svchost.exe
+    lsass.exe
+    winlogon.exe
+    explorer.exe
+    
+Sysinternal 
+what is sysinternals it is +70 tool that helping to magnge the windwos each tool fall under one of folwing categories:
+    File and Disk Utilities
+    Networking Utilities
+    Process Utilities
+    Security Utilities
+    System Information
+    Miscellaneous
 
+The most used tools 
+1- tcpview --> show connections
+2- process exploer 
+Process Explorer enables you to inspect the details of a running process, such as:
+    Associated services
+    Invoked network traffic
+    Handles such as files or directories opened
+    DLLs and memory-mapped files loaded
+    
+# Endpoint Logging 
+1- Windwso event logs https://tryhackme.com/room/windowseventlogs 
+   it is not text file can be acessed in text editor 
+   raw data can trnalated in xml using windwos api 
+   the files stored in binary fromat with .evt and evtx extensions  
+   the evtx fromat are stored in C:\Windows\System32\winevt\Logs
+   
+   The Three ways to access these files 
+   1- Event viwer (GUI)
+   2- Wevtutil.exe (CMD)
+   3- Get-WinEvent (PS)
+   
+2- Sysmon 
+   tool used to monitor and log events in windows 
+   used in enterprise level as part of their logining solutions
+   it like evenet viwer but eith more details 
+   sysmon athers high qulity and detailed logs 
+   commonly used in SIEM  and other pasing soultios 
+   sysmon includes 27 of Events IDs
+    
+    
+3- osquery     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
