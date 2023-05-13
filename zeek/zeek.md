@@ -41,3 +41,86 @@ start zeek service  by zeek control module  this control module help to start st
  zeek-cut -->  for more undertandable output 
  
  $cat conn.log  | zeek-cut host_name
+
+Zeek Signature 
+supoport writing rules to spsific action  
+use low-level pattren maching 
+zeek has scripting languge 
+Zeek aignature has three logical pathes 
+1- signature id --> uniqe signature name 
+2- condisions
+   1- header --> spicific source and deteination 
+   2- content --> filtring on payload
+3- actions  
+    Defualt action --> create signature log
+    additional --> trigger zeel script  
+    
+Condition Field	Available Filters
+Header	  
+src-ip:            Source IP.
+dst-ip:            Destination IP.
+src-port:          Source port.
+dst-port:          Destination port.
+ip-proto:          Target protocol. Supported protocols; TCP, UDP, ICMP, ICMP6, IP, IP6
+
+Content	payload: Packet payload.
+http-request:         Decoded HTTP requests.
+http-request-header:  Client-side HTTP headers.
+http-request-body:    Client-side HTTP request bodys.
+http-reply-header:    Server-side HTTP headers.
+http-reply-body:      Server-side HTTP request bodys.
+ftp: Command line     input of FTP sessions.
+Context	same-ip:      Filtering the source and destination addresses for duplication.
+
+Action	event:         Signature match message.
+
+Comparison
+Operators	            ==, !=, <, <=, >, >=
+
+NOTE!	 Filters accept string, numeric and regex values.
+
+$ Zeek -C -r sample.pcap -s sample.sig
+zeek has .sig extemsion
+
+signature http-password {
+     ip-proto == tcp
+     dst_port == 80
+     payload /.*password.*/
+     event "Cleartext Password Found!"
+}
+
+signature: Signature name.
+ip-proto: Filtering TCP connection.
+dst-port: Filtering destination port 80.
+payload: Filtering the "password" phrase.
+event: Signature match message.
+
+Regex ".*" matches any character zero or more times.
+
+
+ftp brute force 
+signature ftp-admin {
+     ip-proto == tcp
+     ftp /.*USER.*dmin.*/
+     event "FTP Admin Login Attempt!"
+}
+
+signature ftp-brute {
+     ip-proto == tcp
+     payload /.*530.*Login.*incorrect.*/
+     event "FTP Brute-force Attempt"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
