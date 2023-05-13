@@ -1,0 +1,20 @@
+csrss.exe (client server runtime porcess)  has tow process
+run in user mode 
+alwyes running and cirtical process for operating system 
+if process are gone the system are failure 
+Thr responsabilites 
+1- win32 console window
+2- process thread creation adn deletion
+3- For each instance, csrsrv.dll, basesrv.dll, and winsrv.dll are loaded (along with others). 
+4- making windwos api avilable to other process 
+5- maping drive letters
+6- handle windows shutdown 
+
+normal process 
+
+Image path --> %SystemRoot%\System32\csrss.exe
+Parent process --> Created by an instance of smss.exe
+Number of Instances --> Two or more
+user account --> local system 
+tart Time:  Within seconds of boot time for the first two instances (for Session 0 and 1). Start times for additional instances occur as new sessions are created, although only Sessions 0 and 1 are often created.
+
