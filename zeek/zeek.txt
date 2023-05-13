@@ -111,8 +111,7 @@ signature ftp-brute {
      event "FTP Brute-force Attempt"
 }
 
-
-
+$  cat conn.log | zeek-cut id.orig_p orig_pkts resp_pkts
 
 
 
