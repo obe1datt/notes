@@ -1,1 +1,29 @@
+smss.exe (session manger subsystem) or windwos session manager 
+it is for creating new session 
+it is the first user mode process running by kernal 
+the process start user and kernal mode for windows subsystem 
+the subsystems inclueds 
+  1- win32k.sys (kernel mode)
+  2- winsrv.dll (user mode)
+  3- and csrss.exe (user mode)
+  
+The smss.exe starts csrss.exe and wininit.exe at session 0(session for operarting system)
+and csrss.exe and winlogon at session number 1
+Session 0 (csrss.exe & wininit.exe)
+in process hacker go to token tab and you can find the session  
+
+Session 1 (csrss.exe & winlogon.exe)
+in process hacker go to token tab and you can find the session
+
+any subsyem are listed in HKLM\System\CurrentControlSet\Control\Session Manager\Subsystems
+
+
+
+
+
+
+
+
+
+
 
