@@ -1,2 +1,13 @@
 wininit.exe (windows initilzation process )
-it is responsple to lunch srevice.exe (srevice control manger ) and lsass (local secuiry)
+it is responsple to lunch srevice.exe (srevice control manger ) and lsass (local secuiry authrity) and lsaiso.exe at session 0 
+lsaiso assoiceated with Credintial Gard and keygarud 
+you will see lsaiso.ex when Credintial Gard enabled 
+
+normal working 
+
+Image Path  --> %SystemRoot%\System32\wininit.exe
+Parent Process --> Created by an instance of smss.exe
+Number of istances --> One
+User Account --> Local authrity 
+Start time -->   Within seconds of boot time
+
