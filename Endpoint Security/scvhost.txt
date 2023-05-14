@@ -1,0 +1,16 @@
+scvhost.exe (Service Host) or (Host process for windows services) 
+respnsibale for hosting and managing windows services  
+the services running in this process are impelmnted as DLL .
+The implemented DLL are stiored under parameters subkey in ServiceDLL 
+The full path --> HKLM\SYSTEM\CurrentControlSet\Services\SERVICE NAME\Parameters
+To view this information from within Process Hacker, right-click the svchost.exe process
+
+-K in binary path it is for the similar services to share same process 
+
+
+Normal working
+Image Path --> %SystemRoot%\System32\svchost.exe
+Parent Process--> services.exe
+Number of Instances--> Many
+User Account--> Varies (SYSTEM, Network Service, Local Service) depending on the svchost.exe instance. In Windows 10, some instances run as the logged-in user.
+Start Time--> Typically within seconds of boot time. Other instances of svchost.exe can be started after boot.
