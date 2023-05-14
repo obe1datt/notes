@@ -1,0 +1,38 @@
+1- You can  install it from here  
+    https://docs.microsoft.com/en-us/sysinternals/downloads/
+2- or by intract from web bu use this url
+     https://live.sysinternals.com/
+     
+     
+add tool to envirment varible 
+in cmd --> sysdm.cpl then click advnaved 
+Select Path under System Variables and select Edit... then OK
+then add the path of tools
+by powershell --> Download-SysInternalsTools C:\Tools\Sysint
+
+
+
+You can interact with from web by 
+by entering the tool sysinertnals live path into windows explorer or by command line 
+by command
+  1-\\live.sysinternals.com\<toolname> or
+  2- \\live.sysinternals.com\tool\<toolname>
+if the network path error comes you should enble webclient service by powershell
+1- Get-Service WebClient  --> status of webclient
+2- start-service WEbClient --> start that service 
+
+Also network discovery shoudl enbled 
+1- open network and sharing center by --> control.exe -name Microsoft.NetworkAndSharingCenter
+2- Click on Change advanced sharing settings and select Turn on network discovery for your current network profile.
+
+install webclinent on windwos server using WebDAV Redirector feature 
+1- Install-WindowsFeature WebDAV-Redirector –Restart
+2- Get-WindowsFeature WebDAV-Redirector | Format-Table –Autosize
+
+
+
+Aother method to run sysinernals 
+Using mapped drive
+the commadn --> net use * \\live.sysinternals.com\tools\
+this will mount the tools on otherdrive 
+
