@@ -1,0 +1,23 @@
+Tool Number 1
+Autoruns 
+show the programs that run on boot or login time 
+and when you start diffrent built-in apps like internet-explorer 
+
+Tool Number 2
+ProcDump 
+it is cmd tool help to minitor application for cpu spike  
+help admins to detect spikes 
+
+Tool Number 3
+Process explorer for show detials info aabout the process 
+run it --> procexp
+
+Tool Number 4 
+process montitor 
+lunch it  --> procmon 
+some function --> capture events from file tab 
+can use filters 
+
+Tool Number 5
+PSExec
+execute process in other sysetms 
