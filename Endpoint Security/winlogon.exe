@@ -1,0 +1,12 @@
+winlogon.exe Windows logon smss.exe call it an terminate it self
+used for handle SAS (Secure authentication sequnace) 
+it is CTRL+ALT_DELETE to enter username and passowrd  
+and used for loading user profile it is load NTUSER.dat into HKCU and userinit.exe that loads the user shell 
+and used for locking screen and running the user screensaver 
+
+Normal working 
+1- Image Path --> %SystemRoot%\System32\winlogon.exe
+2- paretn process --> smss.exe call it and terminate it slef
+number of instances --> One or more 
+User account --> Local system 
+start time --> Within seconds of boot time for the first instance (for Session 1). Additional instances occur as new sessions are created, typically through Remote Desktop or Fast User Switching logons.
