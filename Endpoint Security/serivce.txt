@@ -1,0 +1,14 @@
+service.exe service control manager (SCM)
+responsable for handle system services (start/interact/stop/loading)
+aldo load device driver market as auto-start in momery 
+also when user log in into machine it is responable for  setting the vlaue of Last Know Good Control Set(Last Known Good Configuration)HKLM\System\Select\LastKnownGood, to that of the CurrentControlSet. 
+It maintains a database that can be queried using a Windows built-in utility, sc.exe. 
+infromation about the services stored --> HKLM\System\CurrentControlSet\Services
+ 
+ This process it is parent for mutiple processes 
+   1-scvhost.exe 
+   2-spoolsv.exe 
+   3-msmpeng.exe
+   4-dllhost.exe
+ 
+Normal Working 
