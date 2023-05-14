@@ -1,0 +1,2 @@
+wininit.exe (windows initilzation process )
+it is responsple to lunch srevice.exe (srevice control manger ) and lsass (local secuiry)
