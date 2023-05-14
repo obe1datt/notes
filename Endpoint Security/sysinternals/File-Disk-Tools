@@ -1,0 +1,20 @@
+Took Number 1
+sigcheck it is tool for check the file version number,timestamp,digital signature details 
+also there is options to check the file status on Virustotal 
+
+use case check for unsigned file 
+C:> sigcheck -u -e C:\Windows\System32
+   -u --> show the files that unkown to thw virus total 
+   -e --> scan only exeutable files .exe .msi ...
+   
+Tool Number 2
+streams to check for ADS alernative data streams 
+use case --> streams <path to file > -accepteula 
+
+or using power shell -->Get-Item C:\Users\Administrator\Desktop\file.txt -stream *
+open the file in the ads --> notepad ./file.txt:ads.txt or 
+remove the ads file   Clear-Content .\Desktop\file.txt -stream ads.txt
+
+Tool Number 3
+SDelete SDelete is a command line utility that takes a number of options. In any given use, 
+it allows you to delete one or more files and/or directories, or to cleanse the free space on a logical disk
