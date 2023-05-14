@@ -1,0 +1,22 @@
+lsass.exe (Local Security Autherity Subsystem) 
+responable for  enforceing security policy in the system 
+verviing user login on the computer server etc .. 
+handle password changes and create access tokens 
+wrting windows servurity logs 
+the parent process is wininit.exe  
+it is create access token for 
+1- SAM (security acess managment)
+2- AD  (Active Dirtctory)
+3- NETLOGON 
+##  it users the authentication packetges are stored in HKLM\System\CurrentControlSet\Control\Lsa
+
+this process are the most targeted by attackers bu using mimikatz used for dump creditials or use it to hide malware 
+
+
+Normal working 
+1- Image Path  --> %SystemRoot%\System32\lsass.exe
+2- Parent process --> wininit.exe
+3- Number of instances  --> One
+4- user account  --> Local account 
+5- start time --> within the boot time  
+
