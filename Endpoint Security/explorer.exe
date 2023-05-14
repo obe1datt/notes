@@ -1,0 +1,23 @@
+explorer.exe windwos explorer 
+used to allow users ro access their folders and files 
+and aother functions like taskbar nad start menu
+
+the Winlogon process runs userinit.exe, which launches the value in HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell
+userinint exits after swaping the explorer.exe becuse of this the parent process is not exist  
+it is have many child process like cmd.exe ....
+
+Normal working 
+
+Image Path --> %SystemRoot%\explorer.exe
+Parent process --> userinit.exe and exits
+Number of instances --> one or more per logedin user 
+User account --> logedin user 
+Start time --> First instance when the first interactive user logon session begins
+
+The information for this room is derived from multiple sources.
+
+    https://www.threathunting.se/tag/windows-process/
+    https://www.sans.org/security-resources/posters/hunt-evil/165/download
+    https://docs.microsoft.com/en-us/sysinternals/resources/windows-internals
+
+
