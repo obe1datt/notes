@@ -57,3 +57,11 @@ when click on event pop up will show up
 hace to sections  
 1- General 
 2- Details 
+
+The Action Panle 
+Create Coustem View and Filter current logs are smae but has one diffrent filter are for oe spicifc action 
+You can view logs fro another computer by right-click on Event Veiwer (Local)
+################################################################3
+wevtutil.exe cmd event veiwer 
+
+
