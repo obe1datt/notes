@@ -63,5 +63,17 @@ Create Coustem View and Filter current logs are smae but has one diffrent filter
 You can view logs fro another computer by right-click on Event Veiwer (Local)
 ################################################################3
 wevtutil.exe cmd event veiwer 
+Allow you to retrive infromation about logs and publishers  
+and install and unistall event mainfets  and run queris and export archive clear logs 
 
+to show help  wevtutil.exe /?
+and for spicific utility 
+ wevtutil.exe ep /?
+ 
+ how many logs --> wevtutil.exe el | Measure-Object
+ 
+wevtutil qe Application /c:3 /rd:true /f:text
+ log name >> Application
 
+ /rd Event read direction
+ /c Maximum number of events to read
