@@ -1,1 +1,25 @@
+What is event logs  
+Event logs recored events in place of execution 
+provide audit that help to understand activity of the system
+adn to diganose the problems 
 
+if the endppint have a problem the admin to query the event logs to see the cause of problem .
+the event logs combine mutiple sources into log file entries  
+
+################################
+Event Viwer  
+The Event viwer are not text file so we can not view it using  text editor
+THe raw data are translted to XML using windwos api 
+stored in binary fromat .evt .evtx 
+The .evtx are stored in  C:\Windows\System32\winevt\Logs
+
+The Event Logs Elements 
+It is format who the information are presented  
+
+1- System Logs   --> assiceated with OPerating system , likr hardware , device drive changes  (info about device)
+2- Security LOGS --> info about login logoff and audit policy Spacifes in the events 
+3- App Logs  --> info about the Applivations  like apps errors events and wrning 
+4- Dirctory Service logs  --> logs about Active dirctiry mainly DC 
+5- File Replication Service Events --> logs about windows server during  sharing of group polices adn logon scripts 
+6- DNS Events logs 
+7- Custetm logs --> allow app the control logs size 
