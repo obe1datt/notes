@@ -77,3 +77,18 @@ wevtutil qe Application /c:3 /rd:true /f:text
 
  /rd Event read direction
  /c Maximum number of events to read
+
+
+####################################################################################333
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/Get-WinEvent?view=powershell-7.3&viewFallbackFrom=powershell-7.1
+Get-WinEvent 
+it is like wevtutil.exe
+
+get all logs from computer 
+Get-WinEvent -Listlog  *
+
+Get log event provider 
+Get-WinEvent -ListProvider *
+
+Log filtering 
+ Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'WLMS' }
