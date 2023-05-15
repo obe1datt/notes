@@ -1,0 +1,7 @@
+Tool Number 1  
+WinObj
+"WinObj is a 32-bit Windows NT program that uses the native Windows NT API (provided by NTDLL.DLL) to access and display information on the NT Object Manager's name space." (official definition)
+
+To showcase this tool, let's look into the concept of Session 0 and Session 1 that was mentioned in the Core Windows Processes room.
+
+Remember that Session 0 is the OS session and Session 1 is the User session. Also recall that there will be at least 2 csrss.exe processes running, one for each session. Note Session 1 will be for the first user logged into the system.
