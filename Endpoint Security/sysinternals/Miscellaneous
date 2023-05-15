@@ -1,0 +1,31 @@
+Tool Number 1
+pginfo 
+use to display information about Computer Desktop like ip adress , memoery  ,serviec pack ,version info 
+
+Tool Number 2  
+RegJump
+To query Regisitry 
+   1- Using Cmd reg query 
+   2- Using POWER SHELL --> Get-Item /  Get-ItemProperty
+
+Tool Number 3  
+Strings 
+scan for UNICODE or ASCII strings 
+
+
+ Real-world scenario: As a security engineer, I had to work with vendors to troubleshoot why an agent wasn't responding on an endpoint—the tools used were ProcExp, ProcMon, and ProcDump.
+
+    ProcExp = to inspect the agent process, its properties, and associated threads and handles.
+    ProcMon = to investigate if there were any indicators on why the agent was not operating as it should.
+    ProcDump = to create a dump of the agent process to send to the vendor for further analysis.
+
+And guess what? Asking questions about Sysinternals became part of the interview questions when hiring additional staff.
+
+Remember, red teamers and adversaries even use these tools.
+
+Below are some additional links to further your knowledge on how to use these tools as a Security Analyst, Security Engineer, or even an Incident Responder:
+
+    Mark's Blog - https://docs.microsoft.com/en-us/archive/blogs/markrussinovich/
+    Windows Blog Archive - https://techcommunity.microsoft.com/t5/windows-blog-archive/bg-p/Windows-Blog-Archive/label-name/Mark%20Russinovich
+    License to Kill: Malware Hunting with Sysinternals Tools - https://www.youtube.com/watch?v=A_TPZxuTzBU
+    Malware Hunting with Mark Russinovich and the Sysinternals Tools - https://www.youtube.com/watch?v=vW8eAqZyWeo
