@@ -23,3 +23,37 @@ It is format who the information are presented
 5- File Replication Service Events --> logs about windows server during  sharing of group polices adn logon scripts 
 6- DNS Events logs 
 7- Custetm logs --> allow app the control logs size 
+
+
+Events Types  
+1- Error --> there id a problem like loss of data of funcinality exmaple the service does mnot loaded 
+2- Warning --> indeicate possible problem , exmaple disk space is low  
+3- Infromation --> discribe a sucessfull operation of application ,dreiver,service example network driver load sucessfully
+4- Sucess audit --> audeited security acess is atemped sucessfull 
+5- faliure audit --> audeited security acess is atemped fails 
+
+To access Event Logs
+1- GUI --> Event Viwer eventvwr.msc
+2- CMD --> Wevtutil.exe
+3- PS  --> Get-WinEvent
+
+Event Viwer have the panes
+1-The pane on the left provides a hierarchical tree listing of the event log providers.
+2-The pane in the middle will display a general overview and summary of the events specific to a selected provider.
+3- The pane on the right is the actions pane.
+
+Applications and Services Logs. Expand this section and drill down on Microsoft > Windows > PowerShell > Operational
+right-click on Operational --> select propiteies you can see many things like log path storge , log size ...
+
+
+Midle Panes 
+1- Level --> type of the log 
+2- Date and Time
+3- Source --> the name of the software case the event 
+4- ID --> uniqe ID numric vlaue of maped for an operation
+5- Task Catagory --> help to orgnixe the entry so you can use the filters 
+
+when click on event pop up will show up 
+hace to sections  
+1- General 
+2- Details 
