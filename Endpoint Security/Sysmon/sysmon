@@ -9,3 +9,49 @@ it events are forwared to SIEM to more anaylsis
 
 path in event viewr 
 Events within Sysmon are stored in Applications and Services Logs/Microsoft/Windows/Sysmon/Operational
+
+Sysmon config file 
+https://github.com/SwiftOnSecurity/sysmon-config
+
+The sysmon works by include and excluding events
+
+Event ID 1  : Process Creation 
+This will look for any process has been created you can use it to detct anu sus process
+this code used detect sus process , means laert any process not svchost.exe 
+
+<RuleGroup name="" groupRelation="or">
+	<ProcessCreate onmatch="exclude">
+	 	<CommandLine condition="is">C:\Windows\system32\svchost.exe -k appmodel -p -s camsvc</CommandLine>
+	</ProcessCreate>
+  
+</RuleGroup>
+
+Event ID 3 : Network Events 
+Look for events that ocus remotly 
+THis will include any sus files and sources as will open ports 
+This Event use iamge and DestinationPort in XML 
+<RuleGroup name="" groupRelation="or">
+	<NetworkConnect onmatch="include">
+	 	<Image condition="image">nmap.exe</Image>
+	 	<DestinationPort name="Alert,Metasploit" condition="is">4444</DestinationPort>
+	</NetworkConnect>
+</RuleGroup>
+
+The above code snippet includes two ways to identify suspicious network connection activity. The first way will identify files transmitted 
+over open ports. In this case, we are specifically looking for nmap.exe which will then be reflected within the event logs. The second method
+identifies open ports and specifically port 4444 which is commonly used with Metasploit. If the condition is met an event will be created and
+ideally trigger an alert for the SOC to further investigate.
+
+
+
+
+Event ID 7 : Image Loaded 
+It is usefull to detect DLLs and detect DLL injection and hijacking attaks
+it is use  Image, Signed, ImageLoaded, and Signature XML tags. 
+<RuleGroup name="" groupRelation="or">
+	<ImageLoad onmatch="include">
+	 	<ImageLoaded condition="contains">\Temp\</ImageLoaded>
+	</ImageLoad>
+</RuleGroup>
+THis code above detect any DLLs loaded in TMP folder 
+if DLL load in tmp that may indetceda sus 
