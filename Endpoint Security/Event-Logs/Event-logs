@@ -92,3 +92,37 @@ Get-WinEvent -ListProvider *
 
 Log filtering 
  Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'WLMS' }
+
+
+###############################################################33
+Xpath query 
+we filter events as xpath 
+it is proivide  standared syntax and symentic for addressing  prts of XML documetn and  manipulating strings, numbers, and booleans
+
+example 
+XPath Query: *[System[(Level <= 3) and TimeCreated[timediff(@SystemTime) <= 86400000]]]
+all events from the channel or log file where the severity level is less than or equal to
+3 and the event occurred in the last 24 hour period
+
+Event Viwer help us to construct xpath query 
+By click on Detials button
+THe first tag it is the starting point it is * or Event Word 
+THe command will loo like 
+Get-WinEvent -LogName Application -FilterXPath '*'
+Now we work our way down the XML tree. The next tag is System.
+Get-WinEvent -LogName Application -FilterXpath "*/System"
+
+Xpath it is like tree 
+let add event id 
+
+Get-WinEvent -LogName Application -FilterXpath "*/System/EventID=100"
+
+using wevtutil.exe 
+wevtutil.exe qe Application /q:*/System[EventID=100] /f:text /c:1
+
+Filter on provider name  
+Get-WinEvent -LogName Application -FilterXPath '*/System/Provider[@Name="WLMS"]'
+
+using wevtutil 
+wevtutil.exe qe Application /q:*/System[EventID=100] /f:text /c:1
+
