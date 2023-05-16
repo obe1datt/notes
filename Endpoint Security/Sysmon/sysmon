@@ -119,4 +119,12 @@ re are a variety of ways and tags that you can use to customize your configurati
 SwiftOnSecurity config files for the rest of this room however feel free to use your own configuration files
 
 
+Start sysmon
+Sysmon.exe -accepteula -i ..\Configuration\swift.xml
+from soft condig file 
+https://github.com/SwiftOnSecurity/sysmon-config
 
+Start filtring using xpath
+
+Get-WinEvent -Path <Path to Log> -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444'
+ Get-WinEvent -Path C:\Users\THM-Analyst\Desktop\Scenarios\Practice\Filtering.evtx -FilterXPath '*/System/EventID=3' -Oldest -MaxEvents 1 | Format-List
