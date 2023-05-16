@@ -55,3 +55,68 @@ it is use  Image, Signed, ImageLoaded, and Signature XML tags.
 </RuleGroup>
 THis code above detect any DLLs loaded in TMP folder 
 if DLL load in tmp that may indetceda sus 
+
+
+Event ID 8 : Create Remote Thread 
+THis will Detect process injection code into other prcoess 
+THe CreateRemoteThread is used for ligitmate task however the malwares use it to hide it si actvity 
+his event will use the SourceImage, TargetImage, StartAddress, and StartFunction XML tags.
+<RuleGroup name="" groupRelation="or">
+	<CreateRemoteThread onmatch="include">
+	 	<StartAddress name="Alert,Cobalt Strike" condition="end with">0B80</StartAddress>
+	 	<SourceImage condition="contains">\</SourceImage>
+	</CreateRemoteThread>
+</RuleGroup>
+The above code snippet shows two ways of monitoring for CreateRemoteThread. The first method will look at the memory address for a specific
+ending condition which could be an indicator of a Cobalt Strike beacon. The second method will look for injected processes that do not have 
+a parent process. This shouThis event uses TargetFilename XML tags
+ld be considered an anomaly and require further investigation. 
+
+Event ID 11 : File Creation 
+Log events when recored when file are create or overwriten to endpoint 
+<RuleGroup name="" groupRelation="or">
+	<FileCreate onmatch="include">
+	 	<TargetFilename name="Alert,Ransomware" condition="contains">HELP_TO_SAVE_FILES</TargetFilename>
+	</FileCreate>
+</RuleGroup> 
+This code used to dtect ransomware 
+This event uses TargetFilename XML tags
+
+Event ID 12/13/14 : Regisitry Event 
+It is lokos for any changes on the reqistry 
+the malwre uses reqgsites to malware perstinace 
+This event uses TargetObject XML tags.
+
+<RuleGroup name="" groupRelation="or">
+	<RegistryEvent onmatch="include">
+	 	<TargetObject name="T1484" condition="contains">Windows\System\Scripts</TargetObject>
+	</RegistryEvent>
+</RuleGroup>
+THis code above help to detect any file writes in Windows\System\Scripts" that regesirt used by adversry to place script to keep prestiance 
+
+Event ID 15  : FileCreatStreamHash 
+It is used to detect ADS alertative data stream it used to hide malware 
+<RuleGroup name="" groupRelation="or">
+	<FileCreateStreamHash onmatch="include">
+	 	<TargetFilename condition="end with">.hta</TargetFilename>
+	</FileCreateStreamHash>
+</RuleGroup> 
+THis code for detect .hta extension in ADS
+
+
+Event ID 22 : DNS Event
+Log all DNS queris 
+THe best pratice it is to exclude the ligtmate  sites
+This event uses QueryName XML tags
+<RuleGroup name="" groupRelation="or">
+	<DnsQuery onmatch="exclude">
+	 	<QueryName condition="end with">.microsoft.com</QueryName>
+	</DnsQuery>
+</RuleGroup> 
+THis code will ecclude the evnets from  micrsoft.com
+
+re are a variety of ways and tags that you can use to customize your configuration files. We will be using the ION-Storm and
+SwiftOnSecurity config files for the rest of this room however feel free to use your own configuration files
+
+
+
