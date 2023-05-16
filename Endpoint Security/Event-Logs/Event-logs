@@ -124,5 +124,12 @@ Filter on provider name
 Get-WinEvent -LogName Application -FilterXPath '*/System/Provider[@Name="WLMS"]'
 
 using wevtutil 
-wevtutil.exe qe Application /q:*/System[EventID=100] /f:text /c:1
+Get-WinEvent -LogName Application -FilterXPath '*/System/Provider[@Name="WLMS"]'
 
+
+
+combine tow queries 
+Get-WinEvent -LogName Application -FilterXPath '*/System/EventID=101 and */System/Provider[@Name="WLMS"]'
+
+Create Xpath query for EventData Elemnt
+Get-WinEvent -LogName Security -FilterXPath '*/EventData/Data[@Name="TargetUserName"]="System"' -MaxEvent 1
