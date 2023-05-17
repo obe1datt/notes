@@ -1,0 +1,14 @@
+Metasploit used 4444 and 5555 ports commonly 
+this list contains most faimous ports for malwares 
+https://docs.google.com/spreadsheets/d/17pSTDNpa0sf6pHeRhusvWG6rThciE8CsXTSlDUAZDyo
+
+by this config it is help us to detect 4444 and 5555 in sysmon 
+<RuleGroup name="" groupRelation="or">
+	<NetworkConnect onmatch="include">
+		<DestinationPort condition="is">4444</DestinationPort>
+		<DestinationPort condition="is">5555</DestinationPort>
+	</NetworkConnect>
+</RuleGroup>
+
+THis commadn help to detect metasploit
+Get-WinEvent -Path <Path to Log> -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444'
