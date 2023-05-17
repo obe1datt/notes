@@ -1,0 +1,19 @@
+Persistence is used by attackers to maintain access to a machine once it is compromised
+One of the methods by modifaing startup registry 
+
+Hunting startup and Start Manu 
+<RuleGroup name="" groupRelation="or">
+	<FileCreate onmatch="include">
+		<TargetFilename name="T1023" condition="contains">\Start Menu</TargetFilename>
+		<TargetFilename name="T1165" condition="contains">\Startup\</TargetFilename>
+	</FileCreate>
+</RuleGroup>
+
+Hunting Registry Key Persistence
+<RuleGroup name="" groupRelation="or">
+	<RegistryEvent onmatch="include">
+		<TargetObject name="T1060,RunKey" condition="contains">CurrentVersion\Run</TargetObject>
+		<TargetObject name="T1484" condition="contains">Group Policy\Scripts</TargetObject>
+		<TargetObject name="T1060" condition="contains">CurrentVersion\Windows\Run</TargetObject>
+	</RegistryEvent>
+</RuleGroup>
