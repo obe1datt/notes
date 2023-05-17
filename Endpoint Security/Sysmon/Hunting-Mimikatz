@@ -1,1 +1,33 @@
+Mimikatz help to dump credintials from memory it is known dumping from lsass 
+to detect mimicatz with file creation 
 
+using this rule
+
+<RuleGroup name="" groupRelation="or">
+	<FileCreate onmatch="include">
+		<TargetFileName condition="contains">mimikatz</TargetFileName>
+	</FileCreate>
+</RuleGroup>
+
+or bu hunting abnormal lsass.exe behavior 
+if the lsass access by other than scvhost.exe that consider sus 
+<RuleGroup name="" groupRelation="or">
+	<ProcessAccess onmatch="include">
+	       <TargetImage condition="image">lsass.exe</TargetImage>
+	</ProcessAccess>
+</RuleGroup>
+
+using this rules help us  to avoid laot of scvhost 
+<RuleGroup name="" groupRelation="or">
+	<ProcessAccess onmatch="exclude">
+		<SourceImage condition="image">svchost.exe</SourceImage>
+	</ProcessAccess>
+	<ProcessAccess onmatch="include">
+		<TargetImage condition="image">lsass.exe</TargetImage>
+	</ProcessAccess>
+</RuleGroup>
+
+
+
+bu suing power shell to detect mimikatz
+Get-WinEvent -Path <Path to Log> -FilterXPath '*/System/EventID=10 and */EventData/Data[@Name="TargetImage"] and */EventData/Data="C:\Windows\system32\lsass.exe"'
