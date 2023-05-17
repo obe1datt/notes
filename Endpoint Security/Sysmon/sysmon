@@ -2,7 +2,7 @@ What is sysmon
 used to mintor and log events in windows commnly used in enterprise level 
 is is provides detailed information about process creation and cnetwork connections and change file creation time 
 this logs send to SIEM and alnyize it 
-
+help to practic https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/tree/master
 sysmon it si the most used by with SIEM and other Log pasing solutions that anlyze and filter and visulize the events  
 the sysmon run at boot time 
 it events are forwared to SIEM to more anaylsis 
