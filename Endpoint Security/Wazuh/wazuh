@@ -42,3 +42,53 @@ created as mangment and agent module
    the alerts in wazuh on this path /var/ossec/logs/alerts/alerts.log
    you can see all rules wazuh --> managment --> Administration --> rules
    
+5- Collect windows logs with wazuh 
+    the information is stored in the Windows event log using a tool called Sysmon.
+    we can use sysmon to aggreagte it with wazuh to process it 
+    1- config sysmon to with xml rules to ensure the sysmon take the rules application->microsoft->windows-> sysmon->operitonal 
+    2- config wazuh put this ossec.conf 
+      <localfile>
+    <location>Microsoft-Windows-Sysmon/Operational</location>
+    <log_format>eventchannel</log_format>
+        </localfile>
+    3- restart wazuh agent  
+    4- add sysmon to wazuh managment server  put this in path --> /var/ossec/etc/rules/local_rules.xml
+        <group name="sysmon,">
+         <rule id="255000" level="12">
+        <if_group>sysmon_event1</if_group>
+        <field name="sysmon.image">\\powershell.exe||\\.ps1||\\.ps2</field>
+        <description>Sysmon - Event 1: Bad exe: $(sysmon.image)</description>
+            <group>sysmon_event1,powershell_execution,</group>
+      </rule>
+      </group>
+ 6- collect linux events with wazuh 
+    by using wazuh  log collector  service to create  entary on the agent  
+    1- config zazuh log collector on linux server 
+    2- wazuh come many rules that help to anlyize logs  file you can fins it here --> /var/ossec/ruleset/rules
+    * wazuh magnagmetn configrationfile /var/ossec/etc/ossec.conf
+
+7- auditing commands on linux with wazuh 
+   wazuh uses auditd packge to monitor certain action and events on linux based 
+   we can use log collector to read the log file and send it to wazuh managment server  
+   we need to install audited packge and plugin 
+   1- sudo apt-get install auditd audispd-plugins
+   enable the service 
+    1- sudo systemctl enable auditd.service & sudo systemctl start auditd.service
+   
+   you can use it to mintor certain commnds  
+   you can add your rules on this dir -- >/etc/audit/rules.d/audit.rules
+   example:
+   let’s edit the file using sudo nano /etc/audit/rules.d/audit.rules and appending 
+   -a exit,always -F arch=64 -F euid=0 -S execve -k audit-wazuh-c
+   
+   then run this commadn to informs audits for new rules 
+   sudo auditctl -R /etc/audit/rules.d/audit.rules
+   
+   finally we need log gile to wazuh agent that created with auditd
+   add this to sudo nano /var/ossec/etc/ossec.conf 
+   <localfile>
+    <location>/var/log/audit/audit.log</location>
+    <log_format>audit</log_format>
+   </localfile>
+
+8- Wazuh API 
