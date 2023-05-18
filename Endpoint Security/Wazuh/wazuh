@@ -92,3 +92,66 @@ created as mangment and agent module
    </localfile>
 
 8- Wazuh API 
+    awzuh has rich features it can interact with commadn line 
+    but before intract we need to authiticate our selfes 
+    we wiil using curl to get token  from wazuh managment server API 
+    first we privide our creds 
+    then run this aommand to get token 
+    TOKEN=$(curl -u : -k -X GET "https://WAZUH_MANAGEMENT_SERVER_IP:55000/security/user/authenticate?raw=true")
+    run this command to confirm that you have been authniticated 
+    curl -k -X GET "https://10.10.33.115:55000/" -H "Authorization: Bearer $TOKEN"
+    
+    
+    API useg examples 
+    this command ti get info about wazuh managment server 
+    curl -k -X GET "https://10.10.33.115:55000/manager/configuration?pretty=true§ion=global" -H "Authorization: Bearer $TOKEN"
+    also you can use it to interact with agent 
+    curl -k -X GET "https://10.10.33.115:55000/agents?pretty=true&offset=1&limit=2&select=status%2Cid%2Cmanager%2Cname%2Cnode_name%2Cversion&status=active" -H "Authorization: Bearer $TOKEN"
+    
+    
+    using console api 
+    you can access it from Tools--> Api console 
+    example 
+    GET /agents?status=active
+
+# Example comment
+
+# You can use ? after the endpoint 
+# in order to get suggestions 
+# for your query params
+
+GET /manager/info
+
+GET /syscollector/000/packages?search=ssh&limit=1
+
+POST /agents
+{
+  "name": "NewAgent"
+}
+
+PUT /logtest
+{
+  "log_format": "syslog",
+  "location": "logtest",
+  "event": "Jul 06 22:00:22 linux-agent sshd[29205]: Invalid user blimey from 1.3.1.3 port 48928"
+}
+
+
+
+Wazuh reporting  
+1- go to modules--> security events  
+2- on dash board (generate report) click on it 
+3- go to mamangemt --> status and report --> repoting  then you can downloadit  
+
+
+Loading sample data 
+Wazuh --> siting --> Smaple data --> Add data
+
+
+
+
+
+
+
+
+    
