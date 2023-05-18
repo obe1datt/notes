@@ -36,4 +36,9 @@ created as mangment and agent module
    audit perfrom using diffrent framewotks like PCI-DSS ,NIST  ,ISO ,MITRE ,SCA
    Wazuh --> modules --> Policy monitoring
    
+4- Monotring logons iwth wazuh 
+   wazuh can recored every secsuufull or insucessfull uthenrication 
+   The rule with an id of 5710 detects attempted connections that are unsuccessful for the SSH protocol. 
+   the alerts in wazuh on this path /var/ossec/logs/alerts/alerts.log
+   you can see all rules wazuh --> managment --> Administration --> rules
    
