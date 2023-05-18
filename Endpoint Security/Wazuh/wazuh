@@ -6,3 +6,34 @@ this tool and application has nultple featues
     3- viusilze comlex data in graoh 
     4- recored device normal behavior to detect anomlize 
     
+wazuh created in 2015 
+created as mangment and agent module  
+
+1-Wazuh Agents  
+  the devices recored the events and processes caleed agent 
+  agents monotiesd the events and process like authentication and user managment  .. 
+  agnet will ofload events and ens it to wazuh 
+   to deploay new aagetn go to wazuh --> agents --> click deploay new agents 
+      1- chose your operating system like windows 
+      2- put you ip adress or domin of wazuh server 
+      3- asign agent to group 
+      4- copy command you have been gived and put it into server 
+
+
+2- Wazuh vulnablitey assemnet and secuirty events  
+   it si powerfull module used to scan agent operating system for installed operating system and ther versions  
+   once the information gathred it is send back to wazuh server  
+   The vulnerability scanner module  start scan when the agent has been deploued or wazuh agent installed  
+   the wazuh can test agent config based on certain rule set  to check compiance 
+   to see all events Wazuh -->  modules  --> security events  --> dashboared  
+   you can anlyze events by click on the event will exapnd it 
+   wazuh --> agents --> security evennts (chose last hours)
+
+
+
+3- Wazuh security auditing  
+   wazuh can audit and monoiter an angetn config and recored events logs 
+   audit perfrom using diffrent framewotks like PCI-DSS ,NIST  ,ISO ,MITRE ,SCA
+   Wazuh --> modules --> Policy monitoring
+   
+   
