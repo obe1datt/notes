@@ -1,0 +1,25 @@
+Kibana Query Languge 
+it is query languge used to search in logs by elastic search 
+it is also support Lucene Query Language
+
+we can search in logs with tow difrrent ways
+1-free-text search
+2- feiled-text search 
+ 
+free-text search search in text only not feilds 
+example but United States in search return all logs continas United States
+if we but United no result come back 
+using wild card United* 
+using logical operatores AND/OR/NOT
+
+Or --> "United States"    OR     "England"
+AND --> "United States" AND "Virginia"
+NOT --> "United States" AND NOT ("Florida")
+
+
+Fieldbased search 
+we prvide FIELD : VALUE 
+example Source_ip : 238.163.231.224    AND     UserName : Suleman
+for more --> https://www.elastic.co/guide/en/kibana/7.17/kuery-query.html
+
+examples --> Source_Country:"United States" AND UserName :"James" or UserName:"Albert" 
