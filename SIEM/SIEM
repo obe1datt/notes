@@ -1,1 +1,9 @@
+What is SIEM (Security informatio and events mangagment system )
+it is tool collect data from endpoints network and security devcis  
+then store them incentrlized place and perfrom colrrletion to them 
+
+Network visablity and SIEM 
+should have better visablity on the network avtivivtes  
+each network component has one or multiple log sources  genertae diffrent logs 
+example install sysmon on the  windows endpoints  
 
