@@ -1,0 +1,32 @@
+Every Device in the network are generate logs for acvtivties performed on it 
+Some common devices are found on the network are genrete logs  
+
+1- Event Viwer  
+  logs every events perfrom on the windows 
+  it is assign uniqu id for every  log or activty
+  the logs are in the event viwer are forwarded to SIEM 
+2- Linux work station 
+     some logs genreated in linux:
+     /var/log/httpd : Contains HTTP Request  / Response and error logs.
+    /var/log/cron   : Events related to cron jobs are stored in this location.
+    /var/log/auth.log and /var/log/secure : Stores authentication related logs.
+    /var/log/kern : This file stores kernel related events.
+    
+3- Web server 
+   logs are stored in linux /var/log/apache or /var/log/httpd.
+
+
+Log ingestion
+each logs provide a rich info about security info 
+Every SIEM has way to  ingerstion these logs  
+here is some methodes how SEIM indestion these logs  
+
+1- Agent/Forwarder 
+   it si tool installed on the endpoint it is configured to collect logs on the endpoint 
+2- syslog 
+   it is network protcol used to collect logs from devices 
+3-  Manul Upload  
+     allow users to ingest offline data for quick analysis. Once the data is ingested, it is normalized and made available for analysis.
+4- port forwared  
+   SIEM listen on certain port  and endpoint forwared the logs or data from SIEM 
+   
