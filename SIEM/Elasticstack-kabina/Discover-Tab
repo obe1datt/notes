@@ -1,0 +1,41 @@
+Where the analyist spend their most time  
+the tab show the logs , the search bar and normlized data 
+Here the analyist perfrom these task 
+   1-search for logs  
+   2-investigate anonmolies 
+   3-Apply filter based on
+      1-search trem 
+      2-Time period 
+      
+The Discover within the Kibana interface the logs begin ingested manually or in real-time
+and the time-chart and normlized feilds etc..
+analyst use this tab for investigation logs 
+
+Some key information available in a dashboard interface are
+
+    Logs (document): Each log here is also known as a single document containing information about the event. It shows the fields and values found in that document.
+    Fields pane: Left panel of the interface shows the list of the fields parsed from the logs. We can click on any field to add the field to the filter or remove it from the search.
+    Index Pattern: Let the user select the index pattern from the available list.
+    Search bar: A place where the user adds search queries / applies filters to narrow down the results.
+    Time Filter: We can narrow down results based on the time duration. This tab has many options to select from to filter/limit the logs.
+    Time Interval: This chart shows the event counts over time.
+    TOP Bar: This bar contains various options to save the search, open the saved searches, share or save the search, etc.
+    
+    
+    
+Time filter 
+used to appy filtrer based on time 
+index pattren 
+Kabina by defylat required index pattren to acess the data beign stored and  ingested in the elasticsearch
+it is tell the kabina what wlastic search we want to explore 
+left panels feileds 
+it is list the normilxed files are in the logs
+add filter options 
+it used to apply filter in kibana 
+Create table 
+elect important fields to create a table showing only those fields.
+
+
+
+
+
