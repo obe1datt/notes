@@ -1,0 +1,14 @@
+Elastic it collection on many component that are linked togother that help user to collect data from diffrent source in diffrent format  
+and perfrom search anlyize and  visualize the data in real-time.
+
+the Elastic component 
+   1- Elastic search 
+   2- Logstash
+   3- Beats 
+   4- Kibana 
+  
+  
+  Elastic search 
+  it is full text search and  analytics engine yused to store json format  
+  it used to 
+  
