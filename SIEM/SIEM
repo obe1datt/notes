@@ -7,3 +7,32 @@ should have better visablity on the network avtivivtes
 each network component has one or multiple log sources  genertae diffrent logs 
 example install sysmon on the  windows endpoints  
 
+we can divide network logs sources into tow types 
+1- Host-Centric log sources 
+   realted to host 
+   example of log sources gnerate logs sysmon ,osquery,windows event logs  
+   exampels of Host-Centric logs 
+      1- user acessing a file  
+      2- user attimping to authenticate  
+      3- process excutionactivty 
+      4- process delete/add registy value
+      5- powershell excution  
+2- Network-Centriv log soutces 
+      1- SSH connection
+      2- VPN
+      3- File acessed bu FTP 
+      4- Web traffic  
+      5- Network File sharing 
+      
+      
+
+Importance of SIEM 
+and handle a lot of logs genrated per seconed 
+
+    Real-time log Ingestion
+    Alerting against abnormal activities
+    24/7 Monitoring and visibility
+    Protection against the latest threats through early detection
+    Data Insights and visualization
+    Ability to investigate past incidents.
+      
