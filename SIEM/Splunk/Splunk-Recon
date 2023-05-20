@@ -1,0 +1,20 @@
+index=botsv1 imreallynotbatman.com
+we are looking for logs in the index botsv1 for imreallynotbatman.com 
+the logs come from these sources 
+    Suricata
+    stream:http
+    fortigate_utm
+    iis
+
+index=botsv1 imreallynotbatman.com sourcetype=stream:http
+search imreallynotbatman.com in the http traffic in the index botsv1
+
+index=botsv1 imreallynotbatman.com sourcetype="stream:http" src_ip="40.80.148.42"
+search imreallynotbatman.com in http trafic come from this ip 40.80.148.42"
+
+search in suricata logd fro scanning  
+index=botsv1 imreallynotbatman.com src=40.80.148.42 sourcetype=suricata
+
+index=botsv1 imreallynotbatman.com sourcetype=suricata src_ip="40.80.148.42" "alert.signature"="ET WEB_SERVER Script tag in URI, Possible Cross Site Scripting Attempt"
+this try to detect xss from the ip in the surcata rules  
+
