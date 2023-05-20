@@ -1,0 +1,23 @@
+Splunk Component 
+1- Indexer 
+2- search head 
+3- forwareder 
+
+
+1- Splunk forwareder 
+it is agent installed on endpoints and it is amin job to collect logs and data and send it to splunk 
+some of key data sources 
+1- web server gnerrate webtraaffic 
+2- windows machhine genrate windows event lgos and sysmon and event vewier 
+3- linux host generate host-certic logs 
+4- data base connections genreate data base requests response or errors 
+
+2- Splnk indexer 
+it is responsble to processing the data coming from forwareder  
+and it normlized the fileds
+
+3- search head 
+where the user can search into inexing logs 
+user use splunk search processing landge 
+the search send to indexer and return the results with files 
+
