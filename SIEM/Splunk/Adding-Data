@@ -1,0 +1,15 @@
+Splunk can ingest any data 
+when adding data into splunk the data are processed and convert into individulas events 
+The data sources can be firewall logs and events logs and website logs 
+
+Data sources are catgries into groups 
+https://docs.splunk.com/Documentation/Splunk/8.1.2/SearchTutorial/AboutgettingdataintoSplunk
+
+Upload data 
+1- Go to the Add data 
+2- Click on Upload
+   1- Select source  --> the file we want to upload 
+   2- select source type --> the type of the logs being uploaded 
+   3- input sitting --> select the index where the logs being dumpping ans host name asidted woth this logs
+   4-review --> reviw all gif
+   5- Done
