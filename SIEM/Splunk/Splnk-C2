@@ -1,0 +1,14 @@
+find any exe files are in the .70 host 
+index=botsv1 sourcetype=stream:http dest_ip="192.168.250.70" *.exe
+then go add this filed to idetify part_filename{}
+then select c_ip which is client ip  or ip of the attacker or the ip who insalled to malware for prestance  
+and by using this 
+index=botsv1 sourcetype=stream:http dest_ip="192.168.250.70"  "part_filename{}"="3791.exe" c_ip="40.80.148.42"
+
+then lets see the file was excuted on the server  
+index=botsv1 "3791.exe"
+then this to see sysmon 
+index=botsv1 3791.exe sourcetype=xmlwineventlog
+
+index=botsv1 3791.exe sourcetype=xmlwineventlog EventID=1
+this filter indecate that the mawlare has been excuted on the server 
