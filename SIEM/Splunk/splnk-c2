@@ -1,0 +1,10 @@
+check the fireall rules by the iamge that the attcker downloaded into server  
+ index=botsv1 sourcetype=fortigate_utm"poisonivy-is-coming-for-you-batman.jpeg"
+ 
+then click url or domin 
+
+then  go to http source type and chck for the get the image from attacker site 
+index=botsv1 sourcetype=stream:http dest_ip=23.22.63.114 "poisonivy-is-coming-for-you-batman.jpeg" src_ip=192.168.250.70
+
+or you can check for dns 
+index=botsv1 sourcetype=stream:dns prankglassinebracket.jumpingcrab.com
