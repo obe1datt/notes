@@ -1,0 +1,12 @@
+identigy the traffic that comming to the .70
+index=botsv1 dest=192.168.250.70 sourcetype=suricata
+if no result 
+
+check form the server to outbound 
+index=botsv1 src=192.168.250.70 sourcetype=suricata
+
+the see what type of traffic creted 
+index=botsv1 src=192.168.250.70 sourcetype=suricata dest_ip=23.22.63.114
+
+then put type of the tfaffic are the detced which is the image 
+index=botsv1 url="/poisonivy-is-coming-for-you-batman.jpeg" dest_ip="192.168.250.70" | table _time src dest_ip http.hostname url
