@@ -20,4 +20,5 @@ to we will use to make the data human redable
 AppCompatCache Parser,
 by cmd  :
 
-AppCompatCacheParser.exe --csv <path to save output> -f <path to SYSTEM hive for data parsing> -c <control set to parse>
+AppCompatCacheParser.exe --csv <path to save output> 
+-f <path to SYSTEM hive for data parsing> -c <control set to parse>
