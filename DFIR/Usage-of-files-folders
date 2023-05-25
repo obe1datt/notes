@@ -5,7 +5,6 @@ NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
 
 also we can see spicifc extinsions 
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.pdf
-
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.doc
 
 OFFICE RECENT FILES OPENED 
@@ -43,13 +42,10 @@ this help us find the last open inforamtion
 bu suing this registry 
 
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePIDlMRU
-
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
 
 Windows Explorer Address/Search Bars:
 
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
-
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery
-
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
