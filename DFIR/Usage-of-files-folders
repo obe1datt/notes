@@ -1,0 +1,53 @@
+The REcent opende files  for each user  
+to see recent files used this info are stored in NTUSER.DAT under
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
+
+also we can see spicifc extinsions 
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.pdf
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.doc
+
+OFFICE RECENT FILES OPENED 
+recent open docuemt 
+they listed in this hive  
+NTUSER.DAT\Software\Microsoft\Office\VERSION
+
+The version number for each Microsoft Office release is different. 
+An example registry key will look like this:
+
+NTUSER.DAT\Software\Microsoft\Office\15.0\Word
+
+m Office 365, Microsoft now ties the location to the user's live ID.
+In such a scenario, the recent files can be found at the following location. 
+
+NTUSER.DAT\Software\Microsoft\Office\VERSION\UserMRU\LiveID_####\FileMRU
+
+SHELL BAGS
+the information about the shell can identigy most recent used files  
+since this sitting is diffrent from user to another it is located 
+in user hives 
+USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\Bags,
+USRCLASS.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU,
+NTUSER.DAT\Software\Microsoft\Windows\Shell\BagMRU,
+NTUSER.DAT\Software\Microsoft\Windows\Shell\Bags,
+
+the  ShellBag Explorerhelp us to to show these infromation in easy fromat 
+
+
+THE OPEN/SAVE AND LASTVISTITED dialog MRU
+
+when you open file and save it diflaog box asking you where to save that file  
+when you open file again the windwos remober that file location 
+this help us find the last open inforamtion  
+bu suing this registry 
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePIDlMRU
+
+Windows Explorer Address/Search Bars:
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery
+
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
