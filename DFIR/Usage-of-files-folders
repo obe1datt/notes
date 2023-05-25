@@ -44,6 +44,8 @@ bu suing this registry
 
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePIDlMRU
 
+NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
+
 Windows Explorer Address/Search Bars:
 
 NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
