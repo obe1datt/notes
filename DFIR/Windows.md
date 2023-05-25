@@ -50,8 +50,27 @@ are located in 'C:\Windows\System32\Config' and are
 
 hives conatins user information 
 tow other hives are conatins user information the user profile are stored in C:\Users\<username>\ and the hives 
+
 1- NTUSER.DAT are mounted in HKEY_CURRENT_USER  
 
 2- USERCLASS.DAT are mounted in HKEY_CUREENT_USER/Software/CLASSLESS
 
 the USERCLASS.DAT are stored in C:\Users\<username>\AppData\Local\Microsoft\Windows 
+
+the NATUSER.DAT are stored  C:\Users\<username>\
+
+other important file and hive it is tje AMchace.hve 
+this file save information on program where recently run on the system
+
+Transaction Logs and Backups 
+The transaction log for each hive is stored as a .LOG file in the same directory as the hive itself.
+It has the same name as the registry hive, but the extension is .LOG. For example, the transaction 
+log for the SAM hive will be located in C:\Windows\System32\Config in the filename SAM.LOG. 
+Sometimes there can be multiple transaction logs as well. In that case, they will have .LOG1, .LOG2 etc.
+, as their extension. It is prudent to look at the transaction logs as well when performing registryforensic
+
+
+These are the backups of the registry hives located in the C:\Windows\System32\Config directory. 
+These hives are copied to the C:\Windows\System32\Config\RegBack directory every ten days.
+It might be an excellent place to look if you suspect that some registry keys might
+have been deleted/modified recently.
