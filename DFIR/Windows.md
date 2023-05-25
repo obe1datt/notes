@@ -10,3 +10,10 @@ and the values stored in that keys
  
  Rgistry Hive: it is grup of keys and subkeys and values stored in single disk 
  
+ Structure of The regsitry :
+    HKEY_CURRENT_USER
+    HKEY_USERS
+    HKEY_LOCAL_MACHINE
+    HKEY_CLASSES_ROOT
+    HKEY_CURRENT_CONFIG
+ 
