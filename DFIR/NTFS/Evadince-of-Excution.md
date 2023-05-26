@@ -33,6 +33,9 @@ Lets find artifacts in the NTFS file system
   C:\Users\<username>\AppData\Local\ConnectedDevicesPlatform\{randomfolder}\ActivitiesCache.db
   
   Tool to find it  Eric Zimmerman's WxTCmd.exe
+  to run it 
+  
+  WxTCmd.exe -f path-to-timeline-file --csv path-to-save-csv
   
   
   
