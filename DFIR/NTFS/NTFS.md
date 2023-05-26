@@ -47,5 +47,17 @@ The NTFS REsolve many isuues in FAT
     it is help to revover data
     
  8- $UsnJrnl
+  
+    Update sequnace number journal , present in the $Extend
+    info about all files where changes in the system ann the
+    reson fro change 
  
-    
+TOOLS
+
+MFT explorer have CLI and GUI versions  
+MFTECmd.exe
+
+MFTECmd parses data from the different files created by the NTFS file system like $MFT, $Boot, etc
+for parsing $MFT use this command 
+
+MFTECmd.exe -f <path-to-$MFT-file> --csv <path-to-save-results-in-csv>
