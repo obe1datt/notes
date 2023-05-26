@@ -1,0 +1,15 @@
+1- Syslog 
+  
+   it is conatins massgees about system activiteis 
+   it can configured hrofght logging level 
+   
+   /var/log/syslog 
+   
+2- auth.log  
+   
+   /var/log/auth.og*
+   
+3- THird party log  
+
+   /var/log/ 
+   like apache /var/log/apache2
