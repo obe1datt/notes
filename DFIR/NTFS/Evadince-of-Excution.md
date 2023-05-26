@@ -37,8 +37,18 @@ Lets find artifacts in the NTFS file system
   
   WxTCmd.exe -f path-to-timeline-file --csv path-to-save-csv
   
+3- Windwos Jump list 
+   
+   Jump list help users to go to last used progrmas or files
+   from the taskbar 
+   
+   you can find it in this path
   
+   C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations
   
+  Tool Eric Zimmerman's JLECmd.exe to parse Jump Lists
+  
+  usage -> JLECmd.exe -f path-to-Jumplist-file --csv path-to-save-csv
   
   
   
