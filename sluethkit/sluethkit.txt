@@ -1,0 +1,14 @@
+img_stat  info about the image
+img_stat <iamge file>
+
+mmls  info about the disk it self layout of the disk it is give adress of the partions 
+mmls <iamge file>
+
+
+fsstat  give the adress of the partions -o --> offest file system info of the partion
+fsstat -o <11264> <iamge file >
+
+fls file system dir 
+fls -o <offset> <image file>
+
+
