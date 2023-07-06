@@ -1,0 +1,18 @@
+MBR FROMAT 
+
+
+-------------------------------------------------
+
+                 MBR STRUCTURE  
+-------------------------------------------------
+BOOT LOADER      |  446 BYTE SIZE
+                 |
+PARTION 1        |  16 BYTE SIZE 
+                 |
+PARTION 2        |  16 BYTE SIZE
+                 |
+PARTION 3        |  16 BYTE SIZE 
+                 |
+PARTION 4        |  16 BYTE SIZE 
+                 |
+SIGNATURE        |  2 BYTES (55 AA)
