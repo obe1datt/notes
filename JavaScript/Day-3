@@ -1,0 +1,67 @@
+// Day-3
+
+// console.log("100");
+// console.log(100);
+
+// console.log(+100) //100
+// console.log(+"100") //1000
+// console.log(+"-100") //-100
+// console.log(+"Osama");
+// console.log(+"15.5"); // 15.5 number 
+// console.log(+"0xFF");
+// console.log(+null);
+// console.log(+false);
+// console.log(+true)
+
+// console.log(-"100") //-100 number
+// console.log(-"-100") //100 number 
+// console.log(Number("15.555555555555")) ;
+
+/* 
+Type Casting  from type to other 
+*/
+
+// let a = "10";
+// let b =  20 ;
+// let c =  true ;
+
+// console.log(+a + b); //30 
+// console.log(a - b) ; //-10 treat a as number
+// console.log("" - 2); // -2 "" = 0
+// console.log(+flase -true); //-2
+// console.log(b + c) ; //21 
+// console.log(+a + b + c) ;//
+
+/*
+Assigment operators
+*/
+
+
+// let a =10 ; 
+// a = a+  20 ; 
+// a +=30 ; 
+// console.log(a);
+
+// all numbers are Double Precision 
+
+// Syntactic Suger "_"
+// change stnaex to be more easy 
+
+// console.log(1_000_000); //1000000
+// console.log(1e6) ; //1000000
+// console.log(10 ** 6 ) ;
+// console.log(1000000.00);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Number.MAX_VALUE); 
+
+console.log((100).toString()) 
+console.log(100..toString())
+
+console.log(1000.555.toFixed()) //1001 string
+console.log(parseInt("100 Oasma")) ; // number from text
+console.log(parseFloat("100.500 Osama")) ; //100.500
+console.log(Number.isInteger(100.5500));//flase
+console.log(Number.isInteger(100)) //truw
+console.log(Number.isInteger("1000")) //false
+
+console.log(Number.isNaN("Osama")) ; //?????
