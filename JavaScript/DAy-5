@@ -1,0 +1,84 @@
+/*
+
+Logical or ||
+
+
+*/
+
+// console.log(Boolean(100)) ; //truw
+// console.log(Boolean(-100));//true
+// console.log(Boolean(0)) ; //false
+// console.log(Boolean("")) ;//false
+// console.log(Boolean(null));//false
+
+
+// let price =0;
+// console.log(`THe price is  ${price || 200}`)
+// console.log(`The Price is ${price ?? 200}`)
+
+
+/*
+
+Switch Statment 
+
+switch (expression)
+{
+ case 1:
+     // code block
+     breka;
+ case 2:
+    // code block 
+ Default :
+    // code block       
+
+
+}
+*/
+
+let day = 0 ; 
+switch(day)
+{
+
+  case 0 : 
+    console.log("Sturday");
+    break ;
+  case 1 :
+      console.log("Sunday");
+      break;
+  case 2:
+    console.log("Monday");
+    break;
+  case 3:
+    console.log("Tuseday");
+    break ;
+  case 4 :
+    console.log("wednesday");
+    break;
+  default:
+    console.log("UnKown");           
+
+}
+
+let day = 0 ; 
+switch(day)
+{
+ default:
+     console.log("UnKown"); 
+     break;
+  case 0 : 
+    console.log("Sturday");
+    break ;
+  case 1 :
+      console.log("Sunday");
+      break;
+  case 2:
+    console.log("Monday");
+    break;
+  case 3:
+    console.log("Tuseday");
+    break ;
+  case 4 :
+    console.log("wednesday");
+    break;          
+
+}
