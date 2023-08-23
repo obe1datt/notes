@@ -1,0 +1,106 @@
+
+# -fname obe -lname moh
+# get-help get-process -showwindow
+# Get-command 
+# get-service  |  format-table | format-list
+#param($fname , $lname) -fname -lname
+ 
+#$firstname  =  $args[0]
+#$lastname   =  $args[1]
+
+# object orinted
+# (Get-data).GetTYpe() # type of object 
+# (Get-Data).DayOfWeek()
+# (Get-Service).ServiceType
+
+# Piping 
+# Get-service  |  slect name  , status 
+
+
+# alies 
+# Get-alies show alises
+# cd  --> set-location
+# new-Alies  -name  c -vlaue cd
+
+# Variblrs 
+# $var1  =  mohammad
+# $var1.gettype()
+
+# [int]$var  = '32'
+# $var  =  Get-service -Nmae spooler
+# $var 
+# Enviroment varible  Get-varible
+# $psversiontable.psversion # powershell version
+# $Error --> envriotmetn varibel  handle error keeps all errors happend in the session 
+
+
+# Arrays and Hash tbales and operatores
+# $myarr = @('moh' ,'qeis','obeidat')
+# $myarr[1]
+
+# hash tabel it liek diectonry 
+# key-value concepts  
+# $myhashtable  = @{'name' = 'mohmmad' ; 'number' = '12343413' }
+# $myhashtable['name']
+
+
+#operatores 
+
+# arithmatic  _ , + , / ,% 
+# comparasion  ->  -eq  ,  -ne  , -lt , -gt , -le , -ge , -contaions , -notcontains 
+# wildcard and regex  -> -like  , -notlike  , -match , -notmatch , -replace  
+# logical and betwise  -> -and , -or , -xor  , -not  , -band  , -bor  , -bxor  , -bnot
+# atch for regex  
+
+
+"""
+if ($x -lt $y)
+{
+
+}else
+{
+
+}
+
+"""
+
+"""
+$i = 1
+do {
+write-host $i ; $i++
+
+}while($i -le 5)
+
+
+"""
+"""
+
+
+}
+
+To filter output (filter a list)
+where-object 
+Get-LocalGroup | Select *| where-object {$_.Name -eq 'Users'} 
+Get-service |select Name , status ,servicename | Where-Object {$_.status -eq 'Running'}
+
+
+Function Addnumber([int] $a  , [int] $b)
+{
+  return $a  +  $b 
+}
+Addnumber -a 10 -b 15 
+
+. ./myfunc --> to save it in shell memory 
+
+
+
+
+# Advanced Functions 
+
+
+
+
+help Get-Service -ShowWindow
+
+"""
+
