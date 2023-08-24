@@ -1,0 +1,40 @@
+================================================================================
+OSPF configration commands Single Area
+================================================================================
+enable ospf
+#router ospf process_ID 
+Network command allows us to specify the interfaces which we want to include in OSPF process  
+Network Adress for each interface the connected interface 
+#network IP_network_# [wildcard_mask] area [area number] 
+RID condig  
+#router-id <id>
+SET lan interface to passive 
+# passive-interface <interface>
+
+Router1
+
+R1# router ospf 10 
+R1# router-d 1.1.1.1
+R1# network 172.16.1.0 0.0.0.255 area 0
+R1# network 172.16.3.0 0.0.0.3  area 0
+R1# network 192.168.10.4 0.0.0.3  area 0
+R1# passive-interface g0/0
+
+Router 2 
+
+R2# router ospf 10
+R2# router-id 2.2.2.2
+R2# network 172.16.2.0 0.0.0.255 area 0
+R2# nwtwork 192.168.10.8 0.0.0.3 area 0
+R2# network 172.16.3.0 0.0.0.3 area 0
+
+Router 3
+
+R3# router ospf 10
+R3# router-id 3.3.3.3 
+R3# network 192.168.1.0 0.0.0.255 area 0
+R3# network 192.168.10.8 0.0.0.3 area 0
+R3# network 192.168.10.4 0.0.0.3 area 0
+
+#show ip protocols
+#show ip ospf neigbours 
