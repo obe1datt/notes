@@ -1,0 +1,22 @@
+====================================================================================================
+Point-to-Point Single Area Configration 
+====================================================================================================
+Ways to config the interfaces 
+
+
+Configure networks for OSPF routing using interface IP addresses and quad-zero masks
+means the ip of interface
+R2# network 192.168.20.1 0.0.0.0 area 0
+R2# network 10.1.1.2 0.0.0.0 area  0 
+R2# network 10.1.1.9 0.0.0.0 area  0
+
+Configure OSPF routing on router interfaces
+using thsi command 
+Router(config-if)# ip ospf process-id area area-idf
+
+R3# int g0/0/0
+R3# ip ospf 10 area  0 
+R3# int s0/1/0
+R3# ip ospf 10 area 0 
+R3# int s0/1/1
+R3# ip ospf 10 area 0
