@@ -1,0 +1,47 @@
+// Day 6
+// Array '
+
+
+// Create aaray 
+
+let myFrines = ["Mohammad" , "Ahmed" , "ALi"]
+// Acess Element 
+console.log(` Hello ${myFrines[0]}`)
+console.log(` Hello ${myFrines[2]}`)
+console.log(` Hello ${myFrines[1][1]}`)
+
+//  Nasted Array 
+let myFrines1 = ["Mohammad" , "Ahmed" , "ALi" , ["Qeis","Huda"]]
+console.log(`HI ${myFrines1[3][0]}`)
+console.log(`HI ${myFrines1[3][0][2 ]}`)
+
+// Change Array Elemnt 
+let myFrines2 = ["Mohammad" , "Ahmed" , "ALi" , ["Qeis","Huda"]]
+myFrines2[1] = 'AHMED'
+console.log(myFrines2)
+myFrines2[3] = "Sameh" 
+console.log(myFrines2) 
+
+// Check if is array 
+console.log(Array.isArray(myFrines2))
+
+// Array Method 1- Length
+let myFrines3 = ["Mohammad" , "Ahmed" , "ALi" , ["Qeis","Huda"]]
+console.log(myFrines3.length);
+
+myFrines3[myFrines3.length] == "GAMAL" ;
+console.log(myFrines3)
+// Always update the last vlaue  
+myFrines3[myFrines3.length - 1] == "DAAoud"
+
+// unshift("" , "") Add Elemnt to the first 
+// push("","") add elemt to the end  
+// shift() reomve the first elemtn 
+// pop() remove the last element  
+
+let myFrines4 = ["Mohammad" , "Ahmed" , "ALi" , ["Qeis","Huda"]]
+myFrines4.unshift("Kali" ,"Linux")
+console.log(myFrines4)
+
+myFrines4.push("Ubuntu","Windows")
+console.log(myFrines4)
