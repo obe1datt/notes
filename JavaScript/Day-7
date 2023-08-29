@@ -1,0 +1,58 @@
+// //  Day-7
+
+// //Arrys Method (Search)
+
+// //indexOf() search elemtn by index
+// // lastIndexOf() 
+// // includes() 
+
+// let myfrindes = ["Mohammad","Qeis","Ahmed","Alla","Ahmed"];
+
+// console.log(myfrindes)
+
+// console.log(myfrindes.indexOf("Ahmed")) //2 first elemnt
+// console.log(myfrindes.indexOf("Mohammad",0)) //0
+
+// console.log(myfrindes.lastIndexOf("Ahmed")) // 4 from left to right
+// console.log(myfrindes.lastIndexOf("Ahmed",-2)) 
+
+// console.log(myfrindes.includes("Ahmed")) // Yes / No exist or not
+
+// if  (myfrindes.includes("Ahmed"))
+// {
+//  document.write("We Found Ahmed")
+// }else{
+//     document.write("We Dont Found Ahmed")
+// }
+
+// let myF = [10 , "Sayed", "Mohammad","90",1000,100,20,"10",-20,-10];
+
+// console.log(myF.sort()) // 1 2 3 a b c 
+
+// console.log(myF.reverse()) // reversing 
+let myfrindes = ["Mohammad","Qeis","Ahmed","Alla","Ahmed"];
+
+// slice( start [opt] , End [opt])
+// not include the ends
+// return new aary does not touch the original array
+console.log(myfrindes.slice()) //all array 
+console.log(myfrindes.slice(1)) 
+console.log(myfrindes.log(1,3))
+console.log(myfrindes.log(-3))
+console.log(myfrindes.log(1,-2))
+
+// splice()
+
+console.log(myfrindes.splice(0,0,"Sameer","Samara")) //add in first 
+console.log(myfrindes.splice(0,1,"Sameer","Samara")) //add in first 
+
+// join arrays  
+
+let myf  =  ["Ali","Ahmed","Sara"];
+let menewF = ["Mohammad","Salman"];
+let schoolfrend  = ["Hatime","Basel"];
+
+let allFreinds = myfrindes.concat(myf,schoolfrend,menewF) ;
+console.log(allFreinds)
+
+console.log(allFreinds.join("|"))
