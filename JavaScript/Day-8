@@ -1,0 +1,100 @@
+// Day 8 
+// Looping  
+
+/*
+let i=0 ;
+for (i ; i <= 10 ; i++)
+{
+    console.log(i);
+}
+*/
+
+let myFriends  = ["Ali","Mohammad","Qeis","Obeidat",1,2,3,4,5];
+/*
+for (let k=0 ; k< myFriends.length;k++)
+{
+    console.log(myFriends[k])
+}
+*/
+onlynmaes = []
+for (let i =0 ; i <  myFriends.length ; i++)
+{
+if (typeof myFriends[i] === 'string')
+{
+    onlynmaes.push(myFriends[i])
+}
+}
+console.log(onlynmaes);
+
+
+
+// Nasted Loop 
+
+let productes  = ["Keyboard", "Mouse" ,"Pen","pad","Monitor"];
+let colors = ["Red","Green","Black"];
+let models = [2020,2021];
+
+for (let i =0 ; i<productes.length;i++ )
+{
+
+    for (let k = 0; k < colors.length ; k++)
+    {
+        console.log(productes[i],colors[k])
+    }
+}
+
+// loop Control 
+// Break 
+// contiune 
+// Label
+
+
+/*
+For Advanced Example
+
+let i = 0; 
+for (;i < productes.length ; )
+{
+    console.log(i);
+    i++ ; 
+}
+
+let j=0 ; 
+for (;;)
+{
+    console.log(productes[j]);
+    j++; 
+    if (j === productes.length)
+    {
+        break ; 
+    }
+}
+
+*/
+
+/*
+let showCount  = 3 ; 
+document.write(`<h1> show ${showCount} products  </h1>`)
+for (let i =0 ; i< showCount ; i++)
+{
+       document.write(`<div>`);
+       document.write(`<h3>- ${i+1} ${productes[i]}</h3>`)
+       for (let j=0; j<colors.length ; j++)
+       {
+        document.write(`<p> ${colors[j]} </p>`)
+       }
+       document.write(`<p> ${colors.join(" | ")} </p>`);
+       document.write(`</div>`);
+}
+*/
+
+
+/*
+While 
+*/
+let i =0 ; 
+while(i < 10)
+{
+    console.log(i);
+    i++;
+}
