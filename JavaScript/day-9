@@ -1,0 +1,104 @@
+// Day 9 
+
+console.log(typeof  console.log) ;
+/*
+function sayHello (userName,age){
+    if (age < 20){
+        console.log(`${userName} App is not sutbale for you`)
+    }else{
+        console.log(`Hello ${userName} and your age is ${age}`)
+
+    }}
+sayHello("Mohammad",15);
+sayHello("Ali",18);
+sayHello("Sayed",40);
+*/
+/*
+function generateYears(start , end , exclude){
+     for (let i= start ; i <= end ; i++){
+        if (i === exclude){
+            continue
+        }
+        console.log(i)
+     }
+}
+
+generateYears(1999,2023,2020);
+
+*/
+
+/*
+function sayhello (usernmae){
+    return `Hello ${usernmae}`;
+}
+let result  = sayhello("Osama");
+console.log(result)
+
+function clac(num1 , num2)
+{
+    return num1 + num2
+}
+let res =  clac(10,20);
+console.log(res +  20);
+
+
+// default function parmaeters
+
+function sayhi (uaer , age="Unkown"){
+    //if (age === undefined){age = "Unknown"}
+    //age = age  || "Unknown" ;
+    return `HI ${uaer} your age is ${age}`;
+}
+
+console.log(sayhi("Osama"));
+
+*/
+
+
+// Rest Paramters
+// ...numbers arrys of arguments 
+let result =0 ;
+function clac(...numbers)
+{
+    for(let i=0 ;  i < numbers.length ; i++){
+        console.log(numbers[i])
+        result += numbers[i]
+
+    }
+    console.log(result)
+}
+console.log(clac(10,20,30,10,50))
+
+
+function showInfo(user="Un" , age="Un" ,  rate=0 ,show="Yes" , ...skills){
+    document.write(`<div>`)
+    document.write(`<h2> Welcome ${user} </h2>`)
+    document.write(`<p> Your Age ${age} </p>`)
+    document.write(`<p> Your rate  $${rate} </p>`)
+    if (show === "Yes"){
+        if (skills.length > 0){
+            document.write(`<p>${skills.join(" | ")} </p>`)
+        }else{
+            document.write(`<p> You dont have skills</p>`)
+        }
+
+    }else{
+        console.log("Skills Is Hidden");
+    }
+    document.write(`</div>`)
+}
+
+showInfo("Mohammad",22,30,"Yes","HTML","JS","CSS");
+
+// anonynous functions
+document.getElementById("show").onclick = function(){
+    console.log("show")
+};
+
+
+
+
+
+
+
+
